@@ -3,7 +3,7 @@ config();
 export async function POST(request, res) {
   const body = await request.json();
   let { textInput } = body;
-  let voice_id = "21m00Tcm4TlvDq8ikWAM"; //Change the value to the available voice ID you prefer.
+  let voice_id = "YSabzCJMvEHDduIDMdwV"; //Change the value to the available voice ID you prefer.
 
   const url =
     `https://api.elevenlabs.io/v1/text-to-speech/${voice_id}`;
@@ -14,7 +14,7 @@ export async function POST(request, res) {
   };
   const reqBody = JSON.stringify({
     text: textInput,
-    model_id: "eleven_monolingual_v1",
+    model_id: "eleven_multilingual_v2",
     voice_settings: {
       stability: 0.5,
       similarity_boost: 0.5,
